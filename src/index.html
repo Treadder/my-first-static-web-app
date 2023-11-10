@@ -41,9 +41,11 @@
           console.log(data2)
           data2.forEach(function (rowData) {
               var row = document.createElement("tr");
-              rowData.forEach(function (cellData) {
+              for(var i = 0; i < Object.keys(rowData).length; i++){
+                    console.log(i);
+                  };
                   var cell = document.createElement("td");
-                  cell.textContent = cellData;
+                  cell.textContent = rowData[i];
                   row.appendChild(cell);
               });
               tableBody.appendChild(row);
