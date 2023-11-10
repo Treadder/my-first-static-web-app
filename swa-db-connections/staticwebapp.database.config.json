@@ -20,7 +20,7 @@
     "host": {
       "mode": "production",
       "cors": {
-        "origins": ["http://localhost:4280"],
+        "origins": ["*"],
         "allow-credentials": false
       },
       "authentication": {
@@ -30,7 +30,7 @@
   },
   "entities": {
     "Person": {
-      "source": "dbo.my-first-static-web-app-database",
+      "source": "dbo.my-first-static-web-app-database-table",
       "permissions": [
         {
           "actions": ["*"],
