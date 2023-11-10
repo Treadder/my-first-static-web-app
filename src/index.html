@@ -36,6 +36,7 @@
           var tableBody = document.getElementById("table-body");
 
           // Create rows and cells based on the 2
+          data2 = JSON.parse(data2)
           data2.forEach(function (rowData) {
               var row = document.createElement("tr");
               rowData.forEach(function (cellData) {
