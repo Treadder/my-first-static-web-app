@@ -21,7 +21,10 @@
   const data = await response.json();
   console.table(data.value);
 
- 
+  // Get references to the button and the table container
+  var tableContainer = document.getElementById("table-container");
+
+  // Add a click event listener to the button
       // Check if the table is already populated
       if (tableContainer.style.display === "none") {
           // Simulate a database call to fetch data (replace this with your actual database call)
