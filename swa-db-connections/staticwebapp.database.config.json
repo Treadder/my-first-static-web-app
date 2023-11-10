@@ -30,7 +30,7 @@
   },
   "entities": {
     "Person": {
-      "source": "dbo.MyTestPersonTable",
+      "source": "dbo.my-first-static-web-app-database-table",
       "permissions": [
         {
           "actions": ["*"],
