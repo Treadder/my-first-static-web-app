@@ -34,9 +34,11 @@
 
           // Get a reference to the table body
           var tableBody = document.getElementById("table-body");
-
+          console.log(data2)
+          console.log("AAAAAAAAA")
           // Create rows and cells based on the 2
           data2 = JSON.parse(data2)
+          console.log(data2)
           data2.forEach(function (rowData) {
               var row = document.createElement("tr");
               rowData.forEach(function (cellData) {
