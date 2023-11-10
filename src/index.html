@@ -20,6 +20,36 @@
   const response = await fetch(endpoint);
   const data = await response.json();
   console.table(data.value);
+
+  // Get references to the button and the table container
+  var showTableButton = document.getElementById("showTableButton");
+  var tableContainer = document.getElementById("table-container");
+
+  // Add a click event listener to the button
+  showTableButton.addEventListener("click", function () {
+      // Check if the table is already populated
+      if (tableContainer.style.display === "none") {
+          // Simulate a database call to fetch data (replace this with your actual database call)
+          var data2 = data.value;
+
+          // Get a reference to the table body
+          var tableBody = document.getElementById("table-body");
+
+          // Create rows and cells based on the 2
+          data2.forEach(function (rowData) {
+              var row = document.createElement("tr");
+              rowData.forEach(function (cellData) {
+                  var cell = document.createElement("td");
+                  cell.textContent = cellData;
+                  row.appendChild(cell);
+              });
+              tableBody.appendChild(row);
+          });
+
+          // Show the table container
+          tableContainer.style.display = "block";
+      }
+  });
 }
 
 
@@ -32,9 +62,11 @@
         <table id="data-table">
             <thead>
                 <tr>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                    <th>Header 3</th>
+                    <th>Video ID</th>
+                    <th>Client ID</th>
+                    <th>View Count</th>
+                    <th>Comment Count</th>
+                    <th>Before Noon?</th>
                 </tr>
             </thead>
             <tbody id="table-body">
@@ -44,7 +76,9 @@
     </div>
   </main>
 </body>
-
+<script>
+ 
+</script>
 </html>
 
 
