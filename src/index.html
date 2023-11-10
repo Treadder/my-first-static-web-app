@@ -37,7 +37,7 @@
           console.log(data2)
           console.log("AAAAAAAAA")
           // Create rows and cells based on the 2
-          data2 = JSON.parse(JSON.stringify(data2))
+          data2 = Array.from(JSON.parse(JSON.stringify(data2)))
           console.log(data2)
           data2.forEach(function (rowData) {
               var row = document.createElement("tr");
