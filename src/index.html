@@ -7,19 +7,44 @@
   <link rel="stylesheet" href="styles.css">
   <title>THIS IS A TEST</title>
 </head>
-<h1>Static Web Apps Database Connections</h1>
+<h1>TikTok Data Dashboard</h1>
 <blockquote>
-    Open the console in the browser developer tools to see the API responses.
+    Here's the raw view of your database! More to come soon!
 </blockquote>
 <div>
     <button id="list" onclick="list()">Check Database</button>
 </div>
+<style>
+  #table-container {
+    display: none;
+  }
+
+  table {
+    width: 100%; /* Make the table span the container width */
+    border-collapse: collapse; /* Remove spacing between table cells */
+    margin: 20px 0; /* Add some spacing around the table */
+  }
+
+  th, td {
+    border: 1px solid #ccc; /* Add borders to table cells */
+    padding: 8px; /* Add padding to table cells */
+    text-align: center; /* Center align content in cells */
+  }
+
+  th {
+    background-color: #f2f2f2; /* Add a background color to header cells */
+  }
+
+  /* Add more styles as needed */
+</style>
 <script>
   async function list() {
   const endpoint = '/data-api/rest/Person';
   const response = await fetch(endpoint);
   const data = await response.json();
   console.table(data.value);
+
+  
 
   // Get references to the button and the table container
   var tableContainer = document.getElementById("table-container");
