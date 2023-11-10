@@ -30,7 +30,7 @@
   },
   "entities": {
     "Person": {
-      "source": "dbo.my-first-static-web-app-database-table",
+      "source": "dbo.my-first-static-web-app-database",
       "permissions": [
         {
           "actions": ["*"],
