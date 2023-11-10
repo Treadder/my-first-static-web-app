@@ -27,7 +27,21 @@
 
 <body>
   <main>
-    <h1>Super cool app</h1>
+    <button id="showTableButton">Show Table</button>
+    <div id="table-container" style="display: none;">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Data will be populated here dynamically -->
+            </tbody>
+        </table>
+    </div>
   </main>
 </body>
 
